@@ -1,28 +1,44 @@
+:root {
+  --btn-font: "Poppins", sans-serif;
+  --bgc: #f3f3f3;
+  --btn-size: 18px;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background-color: #f3f3f3;
+  background-color: var(--bgc);
   min-width: 400px;
-  height: 300px;
+  height: 150px;
+  font-family: var(--btn-font);
 }
 form {
   width: 100%;
-  align-items: center;
+  text-align: center;
 }
 input[type="text"] {
   width: 90%;
-  height: 25px;
+  height: 30px;
   outline: none;
-  padding: 5px 10px 5 10px;
+  padding: 5px 10px 5px 10px;
 }
 input[type="submit"] {
   padding: 10px 50px;
-  border-radius: 20px;
+  border-radius: 50px;
   outline: none;
   background-color: lightgreen;
   border: none;
   font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  font-family: var(--btn-font);
+  font-size: var(--btn-size);
+  transition: 0.25s all;
+}
+input[type="submit"]:hover {
+  transform: translate(0px, -5%);
+  background-color: rgb(85, 202, 85);
+  box-shadow: 0px 5px 5px grey;
 }

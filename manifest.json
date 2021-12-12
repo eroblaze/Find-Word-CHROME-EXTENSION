@@ -3,12 +3,10 @@
   "version": "1.0",
   "name": "FindeX",
   "description": "Better way to find words on current page",
-  "action": {
-    "default_popup": "find.html"
-  },
+  "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["<all_urls>"],
       "js": ["find.js"],
       "css": ["find.css"]
     }
