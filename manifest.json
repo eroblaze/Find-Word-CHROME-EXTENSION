@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "FindeX",
+  "description": "Better way to find words on current page",
+  "action": {
+    "default_popup": "find.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["find.js"],
+      "css": ["find.css"]
+    }
+  ]
+}
