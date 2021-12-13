@@ -154,7 +154,13 @@ document.addEventListener("submit", (e) => {
 
   if (submitForm.name === "chromeFindForm") {
     e.preventDefault();
-    const findThis = submitForm.elements.chromeFindInput.value;
-    alert(findThis);
+    const findEl = submitForm.querySelector("input[name='chromeFindInput']");
+    const findThis = findEl.value;
+    lookUp(findThis);
   }
 });
+
+// To look for elements which have desired text content
+function lookUp(search) {
+  const allEl = document.body.querySelectorAll("*"); // This should be all elements in the body
+}
